@@ -16,6 +16,9 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.SearchView;
 
+import java.util.NavigableMap;
+import java.util.NavigableSet;
+
 
 public class MyActivity extends Activity {
 
@@ -28,6 +31,8 @@ public class MyActivity extends Activity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -55,6 +60,9 @@ public class MyActivity extends Activity {
             case R.id.action_settings:settings(); return true;
             case R.id.AddFragment:add();return true;
             case R.id.Search:search();return true;
+            case android.R.id.home:
+               onNavigateUpFromChild(this);
+                return true;
         }
 
        /* if (id == R.id.action_settings) {
