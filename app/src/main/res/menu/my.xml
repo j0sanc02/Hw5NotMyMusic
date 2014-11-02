@@ -7,12 +7,15 @@
         android:showAsAction="never" />
     <item android:id="@+id/AddFragment"
         android:icon="@android:drawable/ic_input_add"
-        android:title="@string/action_settings"
+        android:title="@string/add_fragment"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom" />
+        android:showAsAction="collapseActionView|ifRoom" />
     <item android:id="@+id/Search"
         android:icon="@android:drawable/ic_search_category_default"
-        android:title="@string/action_settings"
+        android:title="@string/search"
         android:orderInCategory="100"
-        android:showAsAction="ifRoom" />
+        android:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.widget.SearchView"
+        />
+
 </menu>
